@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<styles>
+  <style name="Adopt Gephi attributes" scope="node" selectionOnly="false">
+    <mapping>
+      <source name="label" origin="customProperty" type="string"/>
+      <target name="labelText" type="string">
+        <hints>
+          <hint type="int">0</hint>
+        </hints>
+      </target>
+      <conversion type="asIs"/>
+    </mapping>
+    <mapping>
+      <source name="size" origin="customProperty" type="double"/>
+      <target name="geometryWidth" type="double">
+        <hints/>
+      </target>
+      <conversion type="asIs"/>
+    </mapping>
+    <mapping>
+      <source name="size" origin="customProperty" type="double"/>
+      <target name="geometryHeight" type="double">
+        <hints/>
+      </target>
+      <conversion type="asIs"/>
+    </mapping>
+    <mapping>
+      <source name="x" origin="customProperty" type="double"/>
+      <target name="geometryX" type="double">
+        <hints/>
+      </target>
+      <conversion type="asIs"/>
+    </mapping>
+    <mapping>
+      <source name="y" origin="customProperty" type="double"/>
+      <target name="geometryY" type="double">
+        <hints/>
+      </target>
+      <conversion type="asIs"/>
+    </mapping>
+  </style>
+</styles>
