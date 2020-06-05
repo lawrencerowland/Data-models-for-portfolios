@@ -56,6 +56,13 @@ Specific next proposed areas of Portfolio support
 
 BUSINESS TRANSFORMATION NEEDS IN Q4
 
+| Trigger                          | Earnings report                                                                                                                                                                                                                                                                                                                                      |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Election results>Brexit Jan 2020 | (Today's election result means that January transition under the negotiated withdrawal agreement is the probable scenario, so contingency arrangements can be finalised)                                                                                                                                                                             |
+| 2. Margin pressures              | Europe declined 0.3% with volumes up 0.5% and price down 0.9% in a retail environment that remains difficult. Eastern Europe grew well across all divisions and we saw good growth in Italy helped by purpose-led activations while the decline in Germany slowed. Ice cream volumes were down as we lapped very good weather in the previous year.  |
+| 3. Home Care as growth driver    | Emerging markets and Home Care have been the key growth drivers.                                                                                                                                                                                                                                                                                     |
+| 4. 2019 Stretch plastic goals    | Relevant to the consumer of the future, such as setting stretching goals on plastic use which we recently announced.                                                                                                                                                                                                                                 
+
 Latest business transformation themes
 
 Business Transformation themes
@@ -73,13 +80,13 @@ Digital transformation
 STRATEGY: FMCG-Company has identified 7 Strategic dependencies that are required to deliver its Strategic Themes
 
 
-![](/images//image12.png)
+![](/images/image12.png)
 
 RISK: Company has identified mitigations during business transformation
 
-![](/images//image1.png)
+![](/images/image1.png)
 
-PORTFOLIO COMPATIBILITY: programmes![](/images//image2.png) within the key division this year
+PORTFOLIO COMPATIBILITY: programmes![](/images/image2.png) within the key division this year
 
 Delivery context
 
@@ -113,27 +120,27 @@ triggers respond to delivery context
 
 Portfolio balance review supports 3 of FMCG-Company 2019's Business Transformation themes
 
-![](/images//image3.png)
+![](/images/image3.png)
 
-2\. Brexit assurance proposal appears to be ![](/images//image4.png)crucial to Winning in the marketplace.
+2\. Brexit assurance proposal appears to be ![](/images/image4.png)crucial to Winning in the marketplace.
 
-3\. Regulatory best practice proposal appear![](/images//image5.png)s to be crucial across many strategic drivers
+3\. Regulatory best practice proposal appear![](/images/image5.png)s to be crucial across many strategic drivers
 
 4\. Plastic dependency review proposal supports a business transformation theme as well as a FMCG-Company Strategic dependency
 
-![](/images//image6.png)
+![](/images/image6.png)
 
 5\. A project re-scope ultimately supports 4 strategic themes
 
-![](/images//image7.png)RISK: Our proposals assist in making![](/images//image8.png) the specific mitigations request
+![](/images/image7.png)RISK: Our proposals assist in making![](/images/image8.png) the specific mitigations request
 
-SUPPLY CHAIN: Meeting the ![](/images//image9.png)Supply Chain strategy
+SUPPLY CHAIN: Meeting the ![](/images/image9.png)Supply Chain strategy
 
-These five proposals will work at port![](/images//image10.png)folio, programme and project level
+These five proposals will work at port![](/images/image10.png)folio, programme and project level
 
-Where this sits relative to other program![](/images//image2.png)mes within the key division this year
+Where this sits relative to other program![](/images/image2.png)mes within the key division this year
 
-These proposals deploy the appropriate service off![](/images//image11.png)erings from the full Portfolio-Team service line
+These proposals deploy the appropriate service off![](/images/image11.png)erings from the full Portfolio-Team service line
 
 Summary
 
@@ -182,3 +189,13 @@ AND CONTRIBUTING TO
 24. SUPPLY CHAIN
 
 25. PORTFOLIO COMPATIBILITY
+
+
+
+| Proposed areas of support                                 | Q4 growth triggers                        |
+| --------------------------------------------------------- | ----------------------------------------- |
+| Review project portfolio balance for 2020 Q1              | Home Care as growth driver                |
+| Conduct project assurance readiness for Brexit programme  | Election results >> Brexit Jan 2020       |
+| Identify best practice regulatory project as examplar     | Ongoing compliance with competition laws  |
+| Cross-project review of plastic dependencies              | 2019 Stretch plastic goals                |
+| Rescope large project which has failed to deliver in 2020 | Margin pressures                          |
