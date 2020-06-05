@@ -80,11 +80,11 @@ Digital transformation
 STRATEGY: FMCG-Company has identified 7 Strategic dependencies that are required to deliver its Strategic Themes
 
 
-![](/images/Using-Neo4j/image12.png)
+![](/images/Example-5-Using-Neo4j/image12.png)
 
 RISK: Company has identified mitigations during business transformation
 
-![](/images/Using-Neo4j/image1.png)
+![](/images/Example-5-Using-Neo4j/image1.png)
 
 PORTFOLIO COMPATIBILITY: programmes![](/images/Using-Neo4j/image2.png) within the key division this year
 
