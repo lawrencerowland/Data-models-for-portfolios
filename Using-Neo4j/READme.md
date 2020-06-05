@@ -80,13 +80,13 @@ Digital transformation
 STRATEGY: FMCG-Company has identified 7 Strategic dependencies that are required to deliver its Strategic Themes
 
 
-![](/tree/master/Using-Neo4j/images/image12.png)
+![](/images/Using-Neo4j/image12.png)
 
 RISK: Company has identified mitigations during business transformation
 
-![](/tree/master/Using-Neo4j/images/image1.png)
+![](/images/Using-Neo4j/image1.png)
 
-PORTFOLIO COMPATIBILITY: programmes![](/tree/master/Using-Neo4j/images/image2.png) within the key division this year
+PORTFOLIO COMPATIBILITY: programmes![](/images/Using-Neo4j/image2.png) within the key division this year
 
 Delivery context
 
@@ -120,27 +120,27 @@ triggers respond to delivery context
 
 Portfolio balance review supports 3 of FMCG-Company 2019's Business Transformation themes
 
-![](/tree/master/Using-Neo4j/images/image3.png)
+![](/images/Using-Neo4j/image3.png)
 
-2\. Brexit assurance proposal appears to be ![](/tree/master/Using-Neo4j/images/image4.png)crucial to Winning in the marketplace.
+2\. Brexit assurance proposal appears to be ![](/images/Using-Neo4j/image4.png)crucial to Winning in the marketplace.
 
-3\. Regulatory best practice proposal appear![](/tree/master/Using-Neo4j/images/image5.png)s to be crucial across many strategic drivers
+3\. Regulatory best practice proposal appear![](/images/Using-Neo4j/image5.png)s to be crucial across many strategic drivers
 
 4\. Plastic dependency review proposal supports a business transformation theme as well as a FMCG-Company Strategic dependency
 
-![](/tree/master/Using-Neo4j/images/image6.png)
+![](/images/Using-Neo4j/image6.png)
 
 5\. A project re-scope ultimately supports 4 strategic themes
 
-![](/tree/master/Using-Neo4j/images/image7.png)RISK: Our proposals assist in making![](/tree/master/Using-Neo4j/images/image8.png) the specific mitigations request
+![](/images/Using-Neo4j/image7.png)RISK: Our proposals assist in making![](/images/Using-Neo4j/image8.png) the specific mitigations request
 
-SUPPLY CHAIN: Meeting the ![](/tree/master/Using-Neo4j/images/image9.png)Supply Chain strategy
+SUPPLY CHAIN: Meeting the ![](/images/Using-Neo4j/image9.png)Supply Chain strategy
 
-These five proposals will work at port![](/tree/master/Using-Neo4j/images/image10.png)folio, programme and project level
+These five proposals will work at port![](/images/Using-Neo4j/image10.png)folio, programme and project level
 
-Where this sits relative to other program![](/tree/master/Using-Neo4j/images/image2.png)mes within the key division this year
+Where this sits relative to other program![](/images/Using-Neo4j/image2.png)mes within the key division this year
 
-These proposals deploy the appropriate service off![](/tree/master/Using-Neo4j/images/image11.png)erings from the full Portfolio-Team service line
+These proposals deploy the appropriate service off![](/images/Using-Neo4j/image11.png)erings from the full Portfolio-Team service line
 
 Summary
 
