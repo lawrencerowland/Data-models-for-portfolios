@@ -1,0 +1,5 @@
+
+
+OPTIONAL MATCH (o)-[d:is_a_type_of]->(r:Service) OPTIONAL MATCH (o)-[e:has_business_function]->(s:Business_Function)-[f:serves]->(t:Business_Area)  OPTIONAL MATCH (o)-[g:judged_by]->(v:Metric) OPTIONAL MATCH (o)-[h:uses_Supplier]->(u:Supplier) WHERE n.Name='Department of Health and Human Services' RETURN *
+
+OPTIONAL MATCH (o)-[h:uses_Supplier]->(u:Supplier) OPTIONAL MATCH (o)-[i:lets_contract]->(w:Contract) OPTIONAL MATCH (n)<-[j:responsible_for]-(m:Bureau)
