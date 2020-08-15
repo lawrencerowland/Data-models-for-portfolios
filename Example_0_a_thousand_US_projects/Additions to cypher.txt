@@ -1,5 +1,50 @@
 
+OPTIONAL MATCH (n)<-[j:responsible_for]-(m:Bureau)
+(o)-[h:uses_Supplier]->(u:Supplier)  
 
-OPTIONAL MATCH (o)-[d:is_a_type_of]->(r:Service) OPTIONAL MATCH (o)-[e:has_business_function]->(s:Business_Function)-[f:serves]->(t:Business_Area)  OPTIONAL MATCH (o)-[g:judged_by]->(v:Metric) OPTIONAL MATCH (o)-[h:uses_Supplier]->(u:Supplier) WHERE n.Name='Department of Health and Human Services' RETURN *
 
-OPTIONAL MATCH (o)-[h:uses_Supplier]->(u:Supplier) OPTIONAL MATCH (o)-[i:lets_contract]->(w:Contract) OPTIONAL MATCH (n)<-[j:responsible_for]-(m:Bureau)
+
+
+AS USED
+
+CALL apoc.export.cypher.query("MATCH (n:Agency)-[a:invests]->(o:Investment)-[b:pays_for]->(p:Project)  WHERE n.name= 'Department of Health and Human Services' RETURN *","export.cypher0",{});
+
+CALL apoc.export.cypher.query("MATCH (n:Agency)-[a:invests]->(o:Investment)-[b:pays_for]->(p:Project),(p)-[c:has_task]->(q:Activity)  WHERE n.name= 'Department of Health and Human Services' RETURN p,c,q","export.cypher1",{});
+
+CALL apoc.export.cypher.query("MATCH (n:Agency)-[a:invests]->(o:Investment)-[g:judged_by]->(v:Metric) WHERE n.name= 'Department of Health and Human Services' RETURN o,g,v", "export.cypher2",{});
+
+CALL apoc.export.cypher.query("MATCH (n:Agency)-[a:invests]->(o:Investment)-[i:lets_contract]->(w:Contract)  WHERE n.name= 'Department of Health and Human Services' RETURN o,i,w”, "export.cypher3”,{});
+
+
+Apply cypher 0 which brings in 108 projects and 22 investments
+
+MATCH (n:`UNIQUE IMPORT LABEL`) REMOVE n:`UNIQUE IMPORT LABEL` REMOVE n.`UNIQUE IMPORT ID` RETURN n
+
+
+Apply Cypher 1 
+
+Now 196 Projects but with only the recent ones in with links to Activities
+
+MATCH (n:Project)-[r:has_task]->(m:Activity), (p:Investment)-[pays_for]->(o:Project) WHERE o.Id=n.Id 
+MERGE (o)-[:has_task]->(m) WITH n,o,m
+DETACH DELETE (n)
+RETURN o.name,m.name
+
+Apply Cypher 2
+Now there will be duplicate investments where there is also a Metric
+MATCH (o:Investment)-[g:judged_by]->(v:Metric), (p:Investment)-[b:pays_for]->(q:Project) WHERE p.Identifier=o.Identifier
+MERGE (p)-[:judged_by]->(v) WITH p,v,o
+DETACH DELETE (o)
+RETURN p.name
+
+Apply Cypher 3
+Now there will be duplicate investments where there is also a  Contract
+MATCH (o:Investment)-[i:lets_contract]->(w:Contract), (p:Investment)-[b:pays_for]->(q:Project) WHERE p.Identifier=o.Identifier
+MERGE (p)-[:lets_contract]->(w) WITH o,p
+DETACH DELETE (o)
+RETURN p.name
+But I find that this turns up no changes.
+There are however duplicate Investments I will need to review later. 
+
+
+
