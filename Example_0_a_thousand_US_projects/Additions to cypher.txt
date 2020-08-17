@@ -1,9 +1,10 @@
 
-OPTIONAL MATCH (n)<-[j:responsible_for]-(m:Bureau)
-(o)-[h:uses_Supplier]->(u:Supplier)  
 
 
-
+https://sandbox.neo4j.com/login
+lgrowla@gmail.com
+tydtij-Cosxig-vujve8
+click on the sandbox- saying open in browser
 
 AS USED
 
@@ -15,6 +16,9 @@ CALL apoc.export.cypher.query("MATCH (n:Agency)-[a:invests]->(o:Investment)-[g:j
 
 CALL apoc.export.cypher.query("MATCH (n:Agency)-[a:invests]->(o:Investment)-[i:lets_contract]->(w:Contract)  WHERE n.name= 'Department of Health and Human Services' RETURN o,i,w”, "export.cypher3”,{});
 
+
+(o:Investment)-[b:pays_for]->(p:Project),(p)-[c:has_task]->(q:Activity) 
+(o:Investment)-[g:judged_by]->(v:Metric)
 
 Apply cypher 0 which brings in 108 projects and 22 investments
 
