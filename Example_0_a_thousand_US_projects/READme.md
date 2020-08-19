@@ -65,7 +65,7 @@ This is the overall schema, pulling together all the elements described above.
 
 The FDA sub-portfolio described above is part of the broader Health Bureau.
 
-# The Portfolio of the US Health Bureau
+# The Portfolio for the Department of Health and Human Services
 
 This Agency is responsible for the work of 11 Bureaus, of which one is the FDA: 
 
@@ -108,4 +108,36 @@ Here we look at which Suppliers are used three times or more
 /images/Suppliers_used_3_times.png
 
 Overall, there are 2796 nodes representing these features of the Health Agency, along with 3677 relationships between them, plus additional properties related to each node as described above for the FDA. 
+
+This Health portfolio described above is part of the entire US Government Portfolio 
+
+# The Portfolio of the US Government
+
+The US Government is responsible for the work of 26 Agencies Bureaus, of which one is Health Agency discussed above. 
+-437 Investments/programmes
+-1547 Projects
+-3827 Activities
+
+-706 Suppliers
+-1402 Contracts
+-3462 Metrics/KPIs
+
+Contribution to the Govt effort is defined across
+-32 Business functions
+-30 Services
+
+One can ask questions across these 18728 nodes. 
+For example, we are interested those Investment Programmes which deliver a 'Knowledge Discovery' Service.
+We want to know which Business Functions these programmes support:
+
+/images/Bus_fns_for_one_particular_service.png
+
+We can ask how much these investment programmes cost, answer £ Enhancement_spend_$m.
+
+We discover what is worst scoring of these investment programmes in terms of CIO Evaluation score. the answer is 4 out of 5. We also see that 3 out of the 6 programmes have not been evaluated by their CIO. 
+
+We then ask to find the any investment programmes with a score of 1 out of 5. 
+There is 1, and we can explore its relationships. 
+
+/images/programme_with_lowest_eval_score.png
 
