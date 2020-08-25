@@ -1,4 +1,21 @@
-# A portfolio of 8 programmes managed in a graph database
+# A project portfolio at three levels
+
+Here is a sample of what this covers:
+
+/images/1_programme_in_1_Agency.png
+
+Our graph database holds information about the whole portfolio of IT projects in US Government in 2013. 
+
+Altogether the database holds management information about 1547 Projects, spread across 26 Agencies. 
+
+One of these is the Health Agency which has:
+- 202 Projects 
+- spread across 11 Bureaus
+
+One of these is the FDA (Food & Drug), which has
+	- 17 Projects
+
+I will describe the portfolio at the lowest level first, working up to the Government level. 
 
 ## The Sub-portfolio held by the US FDA
 The FDA Food and Drug Administration had 8 sets of investments:
@@ -11,6 +28,8 @@ The three programmes together have 17 projects
 
 /images/17_projects.png
 
++++
+
 Each project has a number of tasks or activities, 122 over 17 projects. 
 
 /images/project_activity.png
@@ -18,6 +37,8 @@ Each project has a number of tasks or activities, 122 over 17 projects.
 This is the schema, shown so far. 
 
 /images/core_schema.png
+
++++
 
 In addition, we have shown above that Investments are judged for success by Metrics, or KPIs. Here are the metrics for one investment.
 
@@ -28,15 +49,17 @@ These investments are provided through 11 contracts held with 8 suppliers. For i
 
 /images/supplier_contract.png
 
++++
+
+
 ## The purpose of the investment programmes
-At the Government level, there are 7 broad types of administrative service that have been defined which investments provide.
-For the 3 programme investments in the FDA, they together serve two of these. 
+At Government level, 7 types of business service have been defined. The 3 FDA programmes together serve 2 of these. 
 
 /images/Services_to_investment.png
 
-The US Government also has a hierarchy of overall policy and citizen outcomes, which all Government work is tied back to. The three investment programmes tie back to general Health and IT outcomes:
+The US Government also has a hierarchy of policy/citizen outcomes. The FDA programmes deliver Health & IT outcomes:
 
-/images/business_function.png
+<image src="/images/business_function.png" height="150"/>
 
 ## Properties
 The following four key node types have additional property data attached to each instance, as follows:
@@ -141,4 +164,6 @@ There is 1, and we can explore its relationships.
 
 /images/programme_with_lowest_eval_score.png
 
+# Data
 
+/images/Source_of_IT_data.png

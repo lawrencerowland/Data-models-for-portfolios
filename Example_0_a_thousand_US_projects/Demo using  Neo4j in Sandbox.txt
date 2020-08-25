@@ -1,0 +1,14 @@
+login
+open sandbox
+start at top level- which is Bureau
+click to show related nodes
+these are investments held by the FDA
+click on one
+again press neighbour icon
+can zoom in out
+the blues are projects per investment
+can shut windows 
+start again at a new place
+look for the schema
+do this by typing this
+  
