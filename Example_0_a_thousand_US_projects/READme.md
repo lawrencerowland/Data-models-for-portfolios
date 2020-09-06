@@ -22,6 +22,7 @@ I introduce a real portfolio comprising 1547 projects from the practical perspec
 ***A: The IBM programme metrics focus on reliability, service access and cycle-time***
 
 Metrics are recorded under different Measurement_categories. This table shows the most frequent categories applied to this Supplier's programmes. We may wish to add in some metrics around supplier capacity. 
+
 <image src="images1/IBM_metrics.png" width="300"/>
 
 **Overall, which metrics are met most often ?**
@@ -218,7 +219,7 @@ The following four key node types have additional property data attached to each
 
 ### Data source 
 
-Thanks for the data to ProjectingSuccess from last year's excellent Project Hack,  and Oxford Business School for this data on IT projects managed by the US Government, 2013-2018. 
+Thanks for the data to ProjectingSuccess from last year's excellent Project Hack,  and Oxford Business School for this data on IT projects managed by the US Government, 2013-2018. Please respect the data which has been provided by the business school for research and development purposes only. 
 
 <image src="images1/Source_of_IT_data.png" width="300"/>
 
@@ -226,13 +227,22 @@ There are several more bureaus and investments which we have not brought into th
 
 ### Further information
 
-I would welcome any thoughts on what other questions I should be asking of this portfolio, and the challenges people see in using graph databases for their own portfolios. 
+I would welcome any thoughts on what other questions I should be asking, and the challenges you see in using graph databases for their own portfolios. 
 
-It is also possible to set up your own graph database, either using this dataset, or using your own portfolio. For example, if you want to play with this database, I can set up a sandbox for you
+If you struggle to set up your own graph database, or cannot see how to get started with this using this particular dataset then do let me know. 
 
+The simplest way to play with this portfolio is to start with a  subset of the graph, just the FDA department projects. Create a neo4j sandbox, or download Neo4j desktop, and just paste in this [code](https://github.com/lawrencerowland/Data-models-for-portfolios/blob/master/Example_0_a_thousand_US_projects/cypher_code/FDA_sub_graph.cypher) into the query box at the top. This will create a graph database for the FDA. 
+
+This project example is held as Example 0 in this [repository](https://github.com/lawrencerowland/Data-models-for-portfolios). Please be aware this is an active project /repository so it will continue to change.
+
+The latest version of this summary can be found [here](https://github.com/lawrencerowland/Data-models-for-portfolios/tree/master/Example_0_a_thousand_US_projects)
+
+Further more general information on portfolio management approaches [here](https://lawrencerowland.github.io)
+
+Lawrence Rowland
 Sept 2020 
-@lawrencerowland 
-https://lawrencerowland.github.io
+
+
 
 
 
