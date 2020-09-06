@@ -12,6 +12,8 @@ These are the queries used to return the results in this note.
 
 > MATCH (s:Supplier)<-[r:uses_Supplier]-(i:Investment)-->(m:Metric) WHERE s.name='INTERNATIONAL BUSINESS MACHINES CORPORATION' AND i.name IS NOT NULL RETURN m.Measurement_category,count(m.Description) ORDER BY count(m.Description) DESCENDING
 
+> MATCH (m:Metric) WHERE m.Metric_results="Met" RETURN m.Measurement_category,COUNT(m.Description) ORDER BY m.Measurement_category
+
 ** Which programmes are given low scores by clients?**
 
 > MATCH (m:Investment)--(n:Service) WHERE (m.Evaluation_by_CIO='1'OR m.Evaluation_by_CIO='2') AND m.name IS NOT NULL RETURN m,n
@@ -49,6 +51,10 @@ These are the queries used to return the results in this note.
 **Business functions for one particular service**
 
 > MATCH (m:Service)--(i:Investment)--(o:Business_Function) WHERE m.name='743-Knowledge Discovery' AND i.name IS NOT null RETURN m,i,o
+
+**What metrics might help with very late projects?**
+
+> MATCH (m:Project)--(:Investment)--(t:Metric) WHERE m.Project_delay>100 AND t.Metric_results='Not Met' RETURN t.Measurement_category,count(t.Description) ORDER BY count(t.Description) DESC
 
 **the work of 1 department**
 

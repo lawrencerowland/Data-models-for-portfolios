@@ -1,124 +1,183 @@
-## Questions to ask of a project portfolio
+## Managing a portfolio within a graph database
 
-### How many programmes are dependent on our largest single supplier ?
+A graph database makes it easy to:
+- see business dependencies
+- start managing a simple project data model
+- incrementally update both data model and portfolio as things mature.
 
-IBM supplies 16 programmes across 9 departments
+I introduce a real portfolio comprising 1547 projects from the practical perspective of management questions that arise during delivery. If it's not a question you would ask, skip to the next one. Then I describe the whole portfolio, and explain the benefits of a graphical approach. 
 
-<image src="images1/IBM_supplier.png" width="500"/>
+**Q: How many programmes are dependent on our largest single supplier ?**
 
+***A: IBM is the largest supplier, with 16 programmes across 9 departments***
 
-### What metrics are being used to control these particular programmes ?
+16 programmes are shown in green, belonging to (orange) departments.
 
-- Mostly around reliability and availability
-- some around service accessibility
-- some around cycle-time
+<image src="images1/IBM_supplier.png" width="700"/>
 
+*(The common supplier is shown in purple. It is shown as five separate entities because, unhelpfully, each department uses a different supplier code for IBM. This problem is easier to see visually as a graph, and can now be rectified)*
+
+**What metrics control these particular programmes ?**
+
+***A: The IBM programme metrics focus on reliability, service access and cycle-time***
+
+Metrics are recorded under different Measurement_categories. This table shows the most frequent categories applied to this Supplier's programmes. We may wish to add in some metrics around supplier capacity. 
 <image src="images1/IBM_metrics.png" width="300"/>
 
-### Which programmes are given low scores by clients ?
+**Overall, which metrics are met most often ?**
 
-Out of 437 programmes, 8 score badly.
+***A: Quality and reliability metrics are met the most***
 
-And what types of service are these lesser programmes providing?
-- Systems Management 
-- Security Management
+Each metric has a property show whether the Metric is being met. For example, across the portfolio, 300 programmes apply some sort of metric for 'Customer results', and of these 102 are not being met. 
 
-<image src="images1/Poor_eval_programme_services.png" width="250"/>
+Across the portfolio, the 3 metrics least met are:
 
-### What does the lowest scoring programme look like ?
+- Customer results
+- Management of Resource
+- Technology effectiveness
 
-The worst programme has 4 suppliers delivering 5 contracts, with a main project delivering an HR resource management solution. 
+The 3 metrics most met are:
+- Service Quality
+- Reliability
+- Procedural quality
 
-<image src="images1/programme_with_lowest_eval_score.png" width="300"/>
+| Measurement Category                                                                               | Met | Not met | % met |
+| ---------------------------------------------------------------------------- | --- | ------- | ----- |
+| Customer Results: Benefit                              | 198 | 102     | 66%   |
+| Business Results: Management of Government Resources | 141 | 70      | 67%   |
+| Technology: Effectiveness                                     | 111 | 53      | 68%   |
+| ..                                                                      | ..  | ..      | ..    |
+| Process and Activities: Quality                                 | 72  | 17      | 81%   |
+| Technology: Reliability and Availability                       | 504 | 100     | 83%   |
+| Customer Results: Service Quality                               | 167 | 30      | 85%   |
 
-### How much money is being spent on similar HR programmes ?
+**How many programmes are given low scores by clients ?**
 
-There are 6 similar programmes, totalling £82m of capital spend
+***A: Out of 437 programmes, only 8 score badly.***
 
-<image src="images1/7_HR_programmes.png" width="300"/>
+Each programme is evaluated 1-5 by the CIO. These are the 8 programmes, alongside the Business Service the programme is meant to be providing. 
 
-### How much delay to projects on these programmes ?
 
-A total of 7894 days delay spread across these 20 HR projects
+<image src="images1/Poor_eval_programme_services.png" width="500"/>
 
-<image src="images1/projects_for_HR_investments.png" width="300"/>
+We see that Systems & Security Management programmes feature prominently.
 
-17 other  HR projects have experienced no delay. 
+**What is the lowest scoring programme?**
 
-### What tasks are in the schedules of these delayed projects?
-There are 22 activities/tasks listed for these delayed projects
+***A: A programme delivering HR resource management to Dept of Agriculture***
 
-<image src="images1/all_activities_on_delayed_projects.png" width="300"/>
+It has one large project (blue), 4 suppliers (purple) delivering 5 contracts (pink).
 
-### Are these tasks finishing late because they are started late ?
-No. On average they only start 4 days late
-Whereas the typical start delay across all 3827 activities is 1.5 days
+<image src="images1/programme_with_lowest_eval_score.png" width="700"/>
 
-### So which types of programmes have the worst delays?
-- worst programmes have delays ~ 20 days 
-Here are the slowest programme types
+A manager would then want to look at similar programmes across the portfolio.
+
+**How much money is being spent on similar HR programmes ?**
+
+***A: There are 6 similar programmes, totalling £82m of capital spend***
+
+<image src="images1/7_HR_programmes.png" width="200"/>
+
+**How much delay is there to projects on these programmes ?**
+
+***A: Altogether, 7894 days delay is spread across these 20 HR projects***
+
+That is a lot of delay. Here are those projects, which appear to be concentrated in 4 of the 8 similar HR programmes. 
+
+<image src="images1/projects_for_HR_investments.png" width="400"/>
+
+There are 17 other  HR projects which have experienced no delay, including all projects on the four remaining programmes (not shown). 
+
+
+**So what tasks are in the schedules of these 17 delayed projects**
+
+***A: There are 22 main activities/tasks listed for these delayed projects***
+
+<image src="images1/all_activities_on_delayed_projects.png" width="500"/>
+
+The activities (light blue) are concentrated across 2 of the delayed investments, because no data was recorded on  activities for the other 2 delayed programmes.
+
+**Are these tasks finishing late because they are started late ?** 
+
+***A: No. On average they only start 4 days late***
+
+There are records for start delay associated attached as a property of each activity. Mean start delay across all 3827 activities is 1.5 days, compared to 4 days here, so late starts are not the problem here. 
+
+**So which types of programmes do have significant start delays?**
+
+***A: Ironically, programmes to deliver 'Controls & Oversight' have the latest starts, on average 19 days late***
+
+Here are the slowest programme types:
 
 <image src="images1/delay_starts_per_programme_type.png" width="250"/>
 
-### Show all of programmes of this programme  type
 
-- 'Controls & Oversight' programmes have worst record
-- Here are the 5 programmes and 38 activities of this type
+**Show all of programmes of this programme  type**
 
-<image src="images1/Programmes_of_type_Controls_Oversight.png" width="300"/>
+***A: There are 5 programmes to deliver 'Controls & Oversight'***
 
-### Which metrics are being met ?
-Metrics are recorded under different Measurement_categories (e.g. 202-Process and Activities) and also show whether the Metric is being met or not. We could:
+Here are the 5 programmes, showing the associated 8 projects and 38 activities:
 
-Is Measurement category a guide to which metrics are deemed successful by the CIO ?
-what about metric success ?
-### Business functions for one particular service
+<image src="images1/Programmes_of_type_Controls_Oversight.png" width="700"/>
 
-At portfolio level, 7 types of business service have been defined. 
+**At portfolio level, 7 types of business service have been defined. One of these is Knowledge Discovery Services. Which programmes are planned to implement such new Services? What business outcomes are associated with these programmes?**
 
-- Which programmes are designed to provide Knowledge Discovery Services?
-- 5 programmes provide this Service
+***A: 6 programmes provide this Service, with outcomes planned in science services, environmental mgt and economic development***
 
-The portfolio also has a hierarchy of policy/citizen outcomes. 
-- What business functions are delivered by these 5 programmes?
-- The programmes use this service to provide science services, environmental mgt and economic development. 
+This shows the service (pink) to be delivered by the programme as well as the type of business outcomes /business function (orange) that  have been set for the programme. 
 
-<image src="images1/Bus_fns_for_one_particular_service.png" width="300"/>
+<image src="images1/Bus_fns_for_one_particular_service.png" width="500"/>
 
-## Overall
+Within the portfolio as whole, there is a hierarchy of 32 business functions, arranged into 3 business areas, which relates to the business architecture created for the entire Enterprise. 
 
-This portfolio has 
+**For projects delayed more than 100 days, which programme level metrics were not being met ?**
 
-–437 Investments/programmes
-–1547 Projects
-–3827 Activities
+***A: Customer responsiveness metrics are not being met on 71 programmes where there was at least 1 late project***
 
-–706 Suppliers
-–1402 Contracts
-–3462 Metrics/KPIs
+Here are the top 3 failing metrics on programmes where projects are 100 days or more late:
+
+<image src="images1/Metrics_not_met_where_projects_delayed.png" width="400"/>
+
+It might be worth monitoring these metrics more closely.
+
+We also looked to see the opposite, which metrics are still showing as being met, despite having at least one very late project ? Reliability is often still met, suggesting project delay can be about getting this right at the end. 
+
+<image src="images1/Metrics_met_where_projects_delayed.png" width="400"/>
+
+## The portfolio overall
+
+This portfolio has 437 Investments/programmes. These have:
+
+– 1547 Projects across 3827 Activities
+
+– 706 Suppliers across 1402 Contracts
+
+– 3462 Metrics/KPIs
 
 Strategic alignment is linked to 
-–32 Business functions
-–30 Services
 
-These are delivered by 26 Departments organised into 81 Bureaus
+– 32 Business functions
 
-### The work of 1 department
+– 30 Services
 
-One department (or bureau) runs 12 projects, comprised of 94 activities within 4 investments, 2 of which are programmes. These are controlled by 16 metrics, using 5 suppliers on 6 contracts, delivering 3 types of service as 3 business functions.
+These are delivered by 26 Departments organised into 81 Bureaus.
 
-<image src="images1/FDA_146nodes_155rels.png" width="300"/>
+### The work of 1 department, as an example (the Food & Drug Administration)
+
+One department (or bureau) runs 12 projects, comprised of 94 activities within 4 investments, 2 of which are programmes. These are controlled by 16 metrics, using 5 suppliers on 6 contracts, delivering 3 types of service as 3 business functions. One can pull out whichever department or programme one is interested in. 
+
+<image src="images1/FDA_146nodes_155rels.png" width="400"/>
 
 ### Schema
-Although there are 18,728 nodes and 28,771 relationships between them, to cover the entire portfolio, it is easy to pull out the sub-set of interest. 
+Altogether there are 18,728 nodes, with 28,771 relationships between them. This covers the entire portfolio. At any one time, one only needs to see the sub-set or sub-graph relevant to a particular programme manager or client. 
 
 Everything follows one simple pattern, as shown in the schema. 
 
 Left to right shows who owns which activities. 
 
-<image src="images1/schema.png" width="300"/>
+<image src="images1/schema.png" width="800"/>
 
-# Set-up
+### Set-up
 
 - This data is managed in a neo4j database on a free service tier. 
 
@@ -126,10 +185,12 @@ Left to right shows who owns which activities.
 
 - Now it can manage the portfolio, updating as necessary. 
 
-The pattern / schema comes from the data and the management style of the portfolio. 
+The pattern / schema comes from the data and the management style of the portfolio. I find it much easier to see the relationships within the portfolio, than to consult the various spreadsheets - each of which covers some but not all of the properties. For example, there is a spreadsheet for Investments and a spreadsheet for Contracts. I prefer to see this information all at once as a graph. 
+
+There are other graph databases that can provide a similar service, but I find Neo4j has a straightforward an intuitive way of writing a query to generate the graph of interest. 
 
 # Flexibility
-There is no fixed neo4j pattern.
+There is no fixed neo4j pattern or mandated data model.
 
 So the pattern can be updated as the portfolio management matures, whilst reflecting the reality of what records have been kept.
 
@@ -157,9 +218,21 @@ The following four key node types have additional property data attached to each
 
 ### Data source 
 
-Thanks for the data to @projsuccess from last year's excellent Project Hack,  and @OxfordSBS for this data on IT projects managed by the US Government, 2013-2018. 
+Thanks for the data to ProjectingSuccess from last year's excellent Project Hack,  and Oxford Business School for this data on IT projects managed by the US Government, 2013-2018. 
 
 <image src="images1/Source_of_IT_data.png" width="300"/>
+
+There are several more bureaus and investments which we have not brought into the database at this stage. Some rows were dropped where they did not have complete information. 
+
+### Further information
+
+I would welcome any thoughts on what other questions I should be asking of this portfolio, and the challenges people see in using graph databases for their own portfolios. 
+
+It is also possible to set up your own graph database, either using this dataset, or using your own portfolio. For example, if you want to play with this database, I can set up a sandbox for you
+
+Sept 2020 
+@lawrencerowland 
+https://lawrencerowland.github.io
 
 
 
