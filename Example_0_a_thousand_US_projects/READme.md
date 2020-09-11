@@ -1,67 +1,207 @@
-# A project portfolio at three levels
+## Managing a portfolio within a graph database
 
-Here is a sample of what this covers:
+A graph database makes it easy to:
+- see business dependencies
+- start managing a simple project data model
+- incrementally update both data model and portfolio as things mature.
 
-/images/1_programme_in_1_Agency.png
+I introduce a real portfolio comprising 1547 projects from the practical perspective of management questions that arise during delivery. If it's not a question you would ask, skip to the next one. Then I describe the whole portfolio, and explain the benefits of a graphical approach. 
 
-Our graph database holds information about the whole portfolio of IT projects in US Government in 2013. 
+**Q: How many programmes are dependent on our largest single supplier ?**
 
-Altogether the database holds management information about 1547 Projects, spread across 26 Agencies. 
+***A: IBM is the largest supplier, with 16 programmes across 9 departments***
 
-One of these is the Health Agency which has:
-- 202 Projects 
-- spread across 11 Bureaus
+16 programmes are shown in green, belonging to (orange) departments.
 
-One of these is the FDA (Food & Drug), which has
-	- 17 Projects
+<image src="images1/IBM_supplier.png" width="700"/>
 
-I will describe the portfolio at the lowest level first, working up to the Government level. 
+*(The common supplier is shown in purple. It is shown as five separate entities because, unhelpfully, each department uses a different supplier code for IBM. This problem is easier to see visually as a graph, and can now be rectified)*
 
-## The Sub-portfolio held by the US FDA
-The FDA Food and Drug Administration had 8 sets of investments:
-- 3 are named programmes
-- 5 are ongoing spend, and have not been named for simplicity
+**What metrics control these particular programmes ?**
 
-/images/*8_investments.png
+***A: The IBM programme metrics focus on reliability, service access and cycle-time***
 
-The three programmes together have 17 projects
+Metrics are recorded under different Measurement_categories. This table shows the most frequent categories applied to this Supplier's programmes. We may wish to add in some metrics around supplier capacity. 
 
-/images/17_projects.png
+<image src="images1/IBM_metrics.png" width="300"/>
 
-+++
+**Overall, which metrics are met most often ?**
 
-Each project has a number of tasks or activities, 122 over 17 projects. 
+***A: Quality and reliability metrics are met the most***
 
-/images/project_activity.png
+Each metric has a property show whether the Metric is being met. For example, across the portfolio, 300 programmes apply some sort of metric for 'Customer results', and of these 102 are not being met. 
 
-This is the schema, shown so far. 
+Across the portfolio, the 3 metrics least met are:
 
-/images/core_schema.png
+- Customer results
+- Management of Resource
+- Technology effectiveness
 
-+++
+The 3 metrics most met are:
+- Service Quality
+- Reliability
+- Procedural quality
 
-In addition, we have shown above that Investments are judged for success by Metrics, or KPIs. Here are the metrics for one investment.
+| Measurement Category                                                                               | Met | Not met | % met |
+| ---------------------------------------------------------------------------- | --- | ------- | ----- |
+| Customer Results: Benefit                              | 198 | 102     | 66%   |
+| Business Results: Management of Government Resources | 141 | 70      | 67%   |
+| Technology: Effectiveness                                     | 111 | 53      | 68%   |
+| ..                                                                      | ..  | ..      | ..    |
+| Process and Activities: Quality                                 | 72  | 17      | 81%   |
+| Technology: Reliability and Availability                       | 504 | 100     | 83%   |
+| Customer Results: Service Quality                               | 167 | 30      | 85%   |
 
-/images/metric.png
-There are 52 metrics across the 17 investments. 
+**How many programmes are given low scores by clients ?**
 
-These investments are provided through 11 contracts held with 8 suppliers. For instance:
+***A: Out of 437 programmes, only 8 score badly.***
 
-/images/supplier_contract.png
-
-+++
+Each programme is evaluated 1-5 by the CIO. These are the 8 programmes, alongside the Business Service the programme is meant to be providing. 
 
 
-## The purpose of the investment programmes
-At Government level, 7 types of business service have been defined. The 3 FDA programmes together serve 2 of these. 
+<image src="images1/Poor_eval_programme_services.png" width="500"/>
 
-/images/Services_to_investment.png
+We see that Systems & Security Management programmes feature prominently.
 
-The US Government also has a hierarchy of policy/citizen outcomes. The FDA programmes deliver Health & IT outcomes:
+**What is the lowest scoring programme?**
 
-<image src="/images/business_function.png" height="150"/>
+***A: A programme delivering HR resource management to Dept of Agriculture***
 
-## Properties
+It has one large project (blue), 4 suppliers (purple) delivering 5 contracts (pink).
+
+<image src="images1/programme_with_lowest_eval_score.png" width="700"/>
+
+A manager would then want to look at similar programmes across the portfolio.
+
+**How much money is being spent on similar HR programmes ?**
+
+***A: There are 6 similar programmes, totalling £82m of capital spend***
+
+<image src="images1/7_HR_programmes.png" width="200"/>
+
+**How much delay is there to projects on these programmes ?**
+
+***A: Altogether, 7894 days delay is spread across these 20 HR projects***
+
+That is a lot of delay. Here are those projects, which appear to be concentrated in 4 of the 8 similar HR programmes. 
+
+<image src="images1/projects_for_HR_investments.png" width="400"/>
+
+There are 17 other  HR projects which have experienced no delay, including all projects on the four remaining programmes (not shown). 
+
+
+**So what tasks are in the schedules of these 17 delayed projects**
+
+***A: There are 22 main activities/tasks listed for these delayed projects***
+
+<image src="images1/all_activities_on_delayed_projects.png" width="500"/>
+
+The activities (light blue) are concentrated across 2 of the delayed investments, because no data was recorded on  activities for the other 2 delayed programmes.
+
+**Are these tasks finishing late because they are started late ?** 
+
+***A: No. On average they only start 4 days late***
+
+There are records for start delay associated attached as a property of each activity. Mean start delay across all 3827 activities is 1.5 days, compared to 4 days here, so late starts are not the problem here. 
+
+**So which types of programmes do have significant start delays?**
+
+***A: Ironically, programmes to deliver 'Controls & Oversight' have the latest starts, on average 19 days late***
+
+Here are the slowest programme types:
+
+<image src="images1/delay_starts_per_programme_type.png" width="250"/>
+
+
+**Show all of programmes of this programme  type**
+
+***A: There are 5 programmes to deliver 'Controls & Oversight'***
+
+Here are the 5 programmes, showing the associated 8 projects and 38 activities:
+
+<image src="images1/Programmes_of_type_Controls_Oversight.png" width="700"/>
+
+**At portfolio level, 7 types of business service have been defined. One of these is Knowledge Discovery Services. Which programmes are planned to implement such new Services? What business outcomes are associated with these programmes?**
+
+***A: 6 programmes provide this Service, with outcomes planned in science services, environmental mgt and economic development***
+
+This shows the service (pink) to be delivered by the programme as well as the type of business outcomes /business function (orange) that  have been set for the programme. 
+
+<image src="images1/Bus_fns_for_one_particular_service.png" width="500"/>
+
+Within the portfolio as whole, there is a hierarchy of 32 business functions, arranged into 3 business areas, which relates to the business architecture created for the entire Enterprise. 
+
+**For projects delayed more than 100 days, which programme level metrics were not being met ?**
+
+***A: Customer responsiveness metrics are not being met on 71 programmes where there was at least 1 late project***
+
+Here are the top 3 failing metrics on programmes where projects are 100 days or more late:
+
+<image src="images1/Metrics_not_met_where_projects_delayed.png" width="400"/>
+
+It might be worth monitoring these metrics more closely.
+
+We also looked to see the opposite, which metrics are still showing as being met, despite having at least one very late project ? Reliability is often still met, suggesting project delay can be about getting this right at the end. 
+
+<image src="images1/Metrics_met_where_projects_delayed.png" width="400"/>
+
+## The portfolio overall
+
+This portfolio has 437 Investments/programmes. These have:
+
+– 1547 Projects across 3827 Activities
+
+– 706 Suppliers across 1402 Contracts
+
+– 3462 Metrics/KPIs
+
+Strategic alignment is linked to 
+
+– 32 Business functions
+
+– 30 Services
+
+These are delivered by 26 Departments organised into 81 Bureaus.
+
+### The work of 1 department, as an example (the Food & Drug Administration)
+
+One department (or bureau) runs 12 projects, comprised of 94 activities within 4 investments, 2 of which are programmes. These are controlled by 16 metrics, using 5 suppliers on 6 contracts, delivering 3 types of service as 3 business functions. One can pull out whichever department or programme one is interested in. 
+
+<image src="images1/FDA_146nodes_155rels.png" width="400"/>
+
+### Schema
+Altogether there are 18,728 nodes, with 28,771 relationships between them. This covers the entire portfolio. At any one time, one only needs to see the sub-set or sub-graph relevant to a particular programme manager or client. 
+
+Everything follows one simple pattern, as shown in the schema. 
+
+Left to right shows who owns which activities. 
+
+<image src="images1/schema.png" width="800"/>
+
+### Set-up
+
+- This data is managed in a neo4j database on a free service tier. 
+
+- It was created by importing 7 spreadsheets. 
+
+- Now it can manage the portfolio, updating as necessary. 
+
+The pattern / schema comes from the data and the management style of the portfolio. I find it much easier to see the relationships within the portfolio, than to consult the various spreadsheets - each of which covers some but not all of the properties. For example, there is a spreadsheet for Investments and a spreadsheet for Contracts. I prefer to see this information all at once as a graph. 
+
+There are other graph databases that can provide a similar service, but I find Neo4j has a straightforward an intuitive way of writing a query to generate the graph of interest. 
+
+# Flexibility
+There is no fixed neo4j pattern or mandated data model.
+
+So the pattern can be updated as the portfolio management matures, whilst reflecting the reality of what records have been kept.
+
+Or the portfolio can be managed where it is now, and periodically imported into neo4j to gain insight.
+It is quick to implement as there is no permanent project-data-model to sign-off. 
+
+Implement what you have, manage the portfolio, and iterate the structure as the organisation learns what it wants.
+
+## Other information can be stored as properties
+Neo4j allows the user to add properties to both nodes and relationships. 
 The following four key node types have additional property data attached to each instance, as follows:
 
 | Investment | Project | Activity | Metric |
@@ -77,93 +217,52 @@ The following four key node types have additional property data attached to each
 | Enhancement_spend_$m |  | Id |  |
 | Evaluation_by_CIO |  | status |  |
 
-## Summary
-Looking at the entire FDA portfolio, this is 232 nodes altogether, and 252 relationships between them.
+### Data source 
 
-/images/FDA_232_nodes.png
+Thanks for the data to ProjectingSuccess from last year's excellent Project Hack,  and Oxford Business School for this data on IT projects managed by the US Government, 2013-2018. Please respect the data which has been provided by the business school for research and development purposes only. 
 
-This is the overall schema, pulling together all the elements described above.
+<image src="images1/Source_of_IT_data.png" width="300"/>
 
-/images/schema.png
+There are several more bureaus and investments which we have not brought into the database at this stage. Some rows were dropped where they did not have complete information. 
 
-The FDA sub-portfolio described above is part of the broader Health Bureau.
+### Further information
 
-# The Portfolio for the Department of Health and Human Services
+I would welcome any thoughts on what other questions I should be asking, and the challenges you see in using graph databases for their own portfolios. 
 
-This Agency is responsible for the work of 11 Bureaus, of which one is the FDA: 
+If you struggle to set up your own graph database, or cannot see how to get started with this using this particular dataset then do let me know. 
 
-"Centers for Medicare and Medicaid Services"
-"Health Resources and Services Administration"
-"National Institutes of Health"
-"Indian Health Services"
-"Centers for Disease Control and Prevention"
-"Department of Health and Human Services"
-"Substance Abuse and Mental Health Services Administration"
-"Administration for Children and Families"
-"Agency for Healthcare Research and Quality"
-"Departmental Management"
-"Food and Drug Administration"
+The simplest way to play with this portfolio is to start with a  subset of the graph, just the FDA department projects. Create a neo4j sandbox, or download Neo4j desktop, and just paste in this [code](https://github.com/lawrencerowland/Data-models-for-portfolios/blob/master/Example_0_a_thousand_US_projects/cypher_code/FDA_sub_graph.cypher) into the query box at the top. This will create a graph database for the FDA. 
 
-Altogether these Bureaus run 721 Investments, of which many are Programmes, the remainder being Operational spend. 
+This project example is held as Example 0 in this [repository](https://github.com/lawrencerowland/Data-models-for-portfolios). Please be aware this is an active project /repository so it will continue to change.
 
-There are 202 Projects run to deliver these Programmes, and 1102 Activities described within these Projects. 
+The latest version of this summary can be found [here](https://github.com/lawrencerowland/Data-models-for-portfolios/tree/master/Example_0_a_thousand_US_projects)
 
-These investments are judged by 455 Metrics.
+Further more general information on portfolio management approaches [here](https://lawrencerowland.github.io)
 
-These investments contribute to 18 Business Functions, grouped into three business areas: 
-The top five contributions are to:
-- "Health" supported by 	338 investments 
-- "IT Management" supported by 136
-- "Planning and Budgeting"	 supported by 37
-- "Controls and Oversight"supported by 	34
-- "Administrative Management" supported by	32
-
-These investments contribute to 29 Business Functions. The top five contributions are to:
-- "Knowledge Management"	supported by 185 investments
-- "Management of Process"	by 138
-- "Financial Management"	 by 60
-- "Tracking and Workflow"	by 40
-- "Development and Integration"	by 30
+Lawrence Rowland
+Sept 2020 
 
 
-Here we look at which Suppliers are used three times or more 
 
-/images/Suppliers_used_3_times.png
 
-Overall, there are 2796 nodes representing these features of the Health Agency, along with 3677 relationships between them, plus additional properties related to each node as described above for the FDA. 
 
-This Health portfolio described above is part of the entire US Government Portfolio 
 
-# The Portfolio of the US Government
 
-The US Government is responsible for the work of 26 Agencies Bureaus, of which one is Health Agency discussed above. 
--437 Investments/programmes
--1547 Projects
--3827 Activities
 
--706 Suppliers
--1402 Contracts
--3462 Metrics/KPIs
 
-Contribution to the Govt effort is defined across
--32 Business functions
--30 Services
 
-One can ask questions across these 18728 nodes. 
-For example, we are interested those Investment Programmes which deliver a 'Knowledge Discovery' Service.
-We want to know which Business Functions these programmes support:
 
-/images/Bus_fns_for_one_particular_service.png
 
-We can ask how much these investment programmes cost, answer £ Enhancement_spend_$m.
 
-We discover what is worst scoring of these investment programmes in terms of CIO Evaluation score. the answer is 4 out of 5. We also see that 3 out of the 6 programmes have not been evaluated by their CIO. 
 
-We then ask to find the any investment programmes with a score of 1 out of 5. 
-There is 1, and we can explore its relationships. 
 
-/images/programme_with_lowest_eval_score.png
+ 
 
-# Data
 
-/images/Source_of_IT_data.png
+
+
+
+
+
+
+ 
