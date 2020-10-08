@@ -70,40 +70,54 @@ Use these to select a *path through the woods*.
 
 
 ## When to use graphs
-- we will need to go through several iterations with the client
-- we want to use the data to generate the schema
-- projects are only part of the picture
-- data domains overlap 
-- accountability is widely distributed
+A.we will need to go through several iterations with the client
+
+> 'graphs are naturally additive, meaning we can add new kinds of relationships, new nodes, new labels and new subgraphs to an existing structure without disturbing existing queries and application functionality' [^"Graph Databases" Robinson, Webber, Eifrem, 2015 Published by O'Reilly]
+
+B.we want to use the data to generate the schema
 
 <image src="images1/Neo4j_features.jpg" width="270"/>
 
+C. projects are only part of the picture
 
-> 'graphs are naturally additive, meaning we can add new kinds of relationships, new nodes, new labels and new subgraphs to an existing structure without disturbing existing queries and application functionality'
+D. data domains overlap 
 
-**Indicators**
+E. accountability is widely distributed
+
+**Other Indicators**
 
 - delivery is not just done in projects
 - staff are not just accountable for projects
 - data items are shared across the enterprise
 - accountabilities overlap
 
-**Q: Is a graph database needed to generate graph visualisations ?**
-
-*A: No. Most software allows you to do this. Graph databases do this natively, but this is not their main benefit*
-
 +++
 
 ## Appendix 1 Two more examples
 
-> *Example 3* Client xxxxxxx. 
+> *Example 2* An SME has a good project delivery capability, but senior visibility and accountability is poor. They would like a governance overlay over their existing project delivery framework, which covers many project aspects quite well, and is modelled on Prince. They do not want to go fast on this, because they believe that progress is rate-limited most by the  decision-making ability of their senior managers. Therefore we agree to progress in an agile fashion, only adding those features in each user-story which we can see are reachable at the start of each epic. 
 
-<image src="images1/Solution_selection_3.dot.png" width="270"/>
+<image src="images1/Solution_selection_2a.png" width="270"/>
+
+We decide we can:
+
+1. Use our in_house tool to harvest the data
+2. Maintain our design database in SQL, mirroring it in a graph database, to assist with fast visual prototyping of the schema with the client
+3. Revert to a single schema in the SQL database we hand over,where additional elements in the schema get added in phases depending on progress. 
+4. build a bespoke management and visualisation platform with the various business layers suggested by Chase_mgt_services. 
+
++++
+
+> *Example 3* A large client wants to fully transform the way that projects are delivered, as well as the way they are governed and assured. There are multiple data-sources and numerous overlapping accountabilities. They have the budget and senior focus to be able to drive change fast through a Integrated Governance programme.  
+
+<image src="images1/Solution_selection_3a.png" width="270"/>
 
  We decide we can:
  
- 1. xx
- 2. xx 
+ 1. commission their IT team to use their Master Data Management  capability, hosted by Informatics, to provide the data we require, showing provenance,data-used, data-flows, and refresh-rate
+ 2. work within SQL on this data, with a schema we determine
+ 3. return to the client a new SQL schema with instructions via SQL, and work with their team to understand what data flows need to change
+ 4. Use Tableau to provide all the views as per all the Use Cases agreed for governance and decision making. 
 
 +++
 ## Appendix 2: example questions with client
@@ -135,3 +149,19 @@ Use these to select a *path through the woods*.
 - how are we going to store the data we analyse ?
 - how will we be providing the data back for Operations ?
 - what will be the primary tool for ongoing visuals and analytics?
+
++++
+
+## Appendix 3: FAQ
+
+**Q: Is a graph database needed to generate graph visualisations ?**
+
+*A: No. Most software allows you to do this. Graph databases do this natively, but this is not their main benefit*
+
+| graph outputs as a key governance enabler.                                             |
+| culture                                                                                |
+| establish and manage dependencies between data in different domains and different tool |
+| -toolset to create the graph relations                                                 |
+| -draw on the relations and dependencies to the data                                    |
+| -rather than make the data contain those links in every source                         |
+| set accountabilities & funding across departments across multiple software             |
