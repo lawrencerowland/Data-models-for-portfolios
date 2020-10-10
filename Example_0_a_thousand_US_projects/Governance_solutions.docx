@@ -23,7 +23,7 @@ Use these to select a *path through the woods*.
 
 > **Example 1** Client just wants to get project delivery up and running. They have a relatively tidy situation: departments have few overlapping accountabilities. They want to push some change, but want pace to reflect current project maturity in setting a roadmap, so effort will be spread over several months. 
 
-<image src="images1/Solution_selection_1.dot.png" width="320"/>
+<image src="file:///Users/lawrence/Documents/GitHub/Data-models-for-portfolios/Example_0_a_thousand_US_projects/images1/Solution_selection_1.dot.png?md5=ec9845e1b783081b3983d7952b6df6db" width="320"/>
 
  We decide we can:
  
@@ -83,7 +83,7 @@ When we need to go through several iterations with the client
 
 When we want to use the data to generate the schema
 
-<image src="images1/Neo4j_features.jpg" width="270"/>
+<image src="file:///Users/lawrence/Documents/GitHub/Data-models-for-portfolios/Example_0_a_thousand_US_projects/images1/Neo4j_features.jpg?md5=eeb33d3a69bd255028ee046a428f4080" width="270"/>
 
 **Other Indicators**
 - projects are only part of the picture
@@ -100,7 +100,7 @@ When we want to use the data to generate the schema
 
 > *Example 2* An SME has a good project delivery capability, but senior visibility and accountability is poor. They would like a governance overlay over their existing project delivery framework, which covers many project aspects quite well, and is modelled on Prince. They do not want to go fast on this, because they believe that progress is rate-limited most by the  decision-making ability of their senior managers. Therefore we agree to progress in an agile fashion, only adding those features in each user-story which we can see are reachable at the start of each epic. 
 
-<image src="images1/Solution_selection_2a.png" width="340"/>
+<image src="file:///Users/lawrence/Documents/GitHub/Data-models-for-portfolios/Example_0_a_thousand_US_projects/images1/Solution_selection_2a.png?md5=928d6ac27e6308fd8ac7830e8cfed475" width="340"/>
 
 We decide we can:
 
@@ -113,7 +113,7 @@ We decide we can:
 
 > *Example 3* A large client wants to fully transform the way that projects are delivered, as well as the way they are governed and assured. There are multiple data-sources and numerous overlapping accountabilities. They have the budget and senior focus to be able to drive change fast through a Integrated Governance programme.  
 
-<image src="images1/Solution_selection_3a.png" width="320"/>
+<image src="file:///Users/lawrence/Documents/GitHub/Data-models-for-portfolios/Example_0_a_thousand_US_projects/images1/Solution_selection_3a.png?md5=1d2892bb4d57b28df2725e484cd782c4" width="320"/>
 
  We decide we can:
  

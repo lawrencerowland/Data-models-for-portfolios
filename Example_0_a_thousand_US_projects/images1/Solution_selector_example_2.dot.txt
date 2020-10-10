@@ -1,16 +1,17 @@
 digraph G {
+    
+    bgcolor = transparent;
+    
   subgraph cluster_0 {
      Re_engineer; Accountability_overlay; Up_and_running;
     label = "*Aspiration*";
   }
   subgraph cluster_1 {
-    node [style=filled];
     Complicated;Partial_framework; Tidy_silos:New_or_ad_hoc;
     label = "*Data_&_Accountability_landscape*";
   }
   
     subgraph cluster_3 {
-    node [style=filled];
     Corporate ;SME; small
     label = "*Size*";
   }
@@ -26,13 +27,14 @@ digraph G {
   }
   subgraph cluster_10 {
     node [style=filled];
-    Informatica->SQL->SQL_->Tableau;
+    Quantum_harvester->SQL->SQL_->Chase_MIS_Platform;
+    Quantum_harvester->Graph_database->SQL_
     label = "*Tool_selected*";
   }
-  Select_with_client ->Re_engineer;
-  Re_engineer->Complicated;
-  Complicated-> Corporate;
-  Corporate->Drive_change;
-  Drive_change->Data_tool;
-  Drive_change ->Informatica;
+  Select_with_client ->Accountability_overlay;
+  Accountability_overlay->Partial_framework;
+  Partial_framework-> SME;
+  SME->Iterate;
+  Iterate->Data_tool;
+  Iterate ->Quantum_harvester;
 }

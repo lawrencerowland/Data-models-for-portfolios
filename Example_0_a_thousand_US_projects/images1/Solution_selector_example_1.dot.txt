@@ -1,16 +1,17 @@
+# http://www.graphviz.org/content/cluster
+
 digraph G {
+    bgcolor = transparent
   subgraph cluster_0 {
      Re_engineer; Accountability_overlay; Up_and_running;
-    label = <[*Aspiration*](www.github.com)>;
+    label = "*Aspiration*";
   }
   subgraph cluster_1 {
-    node [style=filled];
     Complicated;Partial_framework; Tidy_silos:New_or_ad_hoc;
     label = "*Data_&_Accountability_landscape*";
   }
   
     subgraph cluster_3 {
-    node [style=filled];
     Corporate ;SME; small
     label = "*Size*";
   }
