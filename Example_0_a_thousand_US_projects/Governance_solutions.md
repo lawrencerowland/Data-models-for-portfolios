@@ -1,14 +1,19 @@
 # Selling Governance solutions
 
 - Select a solution
+
 - Implementation steps
+
 - When to use graphs
 
 Appendix
 
 - 2 more examples of solution selection
+
 - example questions with client
+
 - Use cases
+
 - FAQ 
 
 +++
@@ -23,7 +28,7 @@ Use these to select a *path through the woods*.
 
 > **Example 1** Client just wants to get project delivery up and running. They have a relatively tidy situation: departments have few overlapping accountabilities. They want to push some change, but want pace to reflect current project maturity in setting a roadmap, so effort will be spread over several months. 
 
-<image src="images1/Solution_selection_1.dot.png" width="320"/>
+<image src="images1/Solution_selection_1.dot.png" width="250"/>
 
  We decide we can:
  
@@ -32,7 +37,7 @@ Use these to select a *path through the woods*.
  3. hand the data back in a relational database 
  4. Dashboard and views will be set up in PowerBI. 
 
-+++
+
 
 ## Implementation steps
 
@@ -75,6 +80,8 @@ Use these to select a *path through the woods*.
 ||identify emerging challenges|
 ||culture roadmap|
 
++++
+
 ## When to use graphs
 
 When we need to go through several iterations with the client
@@ -100,7 +107,7 @@ When we want to use the data to generate the schema
 
 > *Example 2* An SME has a good project delivery capability, but senior visibility and accountability is poor. They would like a governance overlay over their existing project delivery framework, which covers many project aspects quite well, and is modelled on Prince. They do not want to go fast on this, because they believe that progress is rate-limited most by the  decision-making ability of their senior managers. Therefore we agree to progress in an agile fashion, only adding those features in each user-story which we can see are reachable at the start of each epic. 
 
-<image src="images1/Solution_selection_2a.png" width="340"/>
+<image src="images1/Solution_selection_2a.png" width="250"/>
 
 We decide we can:
 
@@ -113,7 +120,7 @@ We decide we can:
 
 > *Example 3* A large client wants to fully transform the way that projects are delivered, as well as the way they are governed and assured. There are multiple data-sources and numerous overlapping accountabilities. They have the budget and senior focus to be able to drive change fast through a Integrated Governance programme.  
 
-<image src="images1/Solution_selection_3a.png" width="320"/>
+<image src="images1/Solution_selection_3a.png" width="270"/>
 
  We decide we can:
  
@@ -125,7 +132,6 @@ We decide we can:
 *What are the features to select on ?*
 *Which solution combinations work ?*
 
-+++
 ## Appendix 2: example questions with client
 
 **Questions about Aspiration**
