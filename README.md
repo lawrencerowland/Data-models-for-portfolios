@@ -4,7 +4,7 @@
 
 **September 2020 case study · reading guide added 1 October 2026.** Follow a management question from a shared supplier to its investments, then into measures, projects and activities. The guide explains the original pictures, historical totals, query limits and retained source files.
 
-[![The original supplier view connects several IBM supplier records to investment and agency nodes.](Example_0_a_thousand_US_projects/images1/IBM_supplier.png)](Example_0_a_thousand_US_projects/READme.md)
+[![The original supplier view connects several IBM supplier records to investment and organisational nodes.](Example_0_a_thousand_US_projects/images1/IBM_supplier.png)](Example_0_a_thousand_US_projects/READme.md)
 
 [Read the source walkthrough](Example_0_a_thousand_US_projects/READme.md) · [Read the illustrated Library case study](https://lawrencerowland.github.io/library/models/us-portfolio-questions.html) · [Other worked models](https://lawrencerowland.github.io/Portfolio-data-model.html#read-the-worked-models)
 
