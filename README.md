@@ -1,3 +1,17 @@
+# Project portfolios as connected records
+
+## Start with the US IT portfolio example
+
+**September 2020 case study · reading guide added 1 October 2026.** Follow a management question from a shared supplier to its investments, then into measures, projects and activities. The guide explains the original pictures, historical totals, query limits and retained source files.
+
+[![The original supplier view connects several IBM supplier records to investment and agency nodes.](Example_0_a_thousand_US_projects/images1/IBM_supplier.png)](Example_0_a_thousand_US_projects/READme.md)
+
+[Read the source walkthrough](Example_0_a_thousand_US_projects/READme.md) · [Read the illustrated Library case study](https://lawrencerowland.github.io/library/models/us-portfolio-questions.html) · [Other worked models](https://lawrencerowland.github.io/Portfolio-data-model.html#read-the-worked-models)
+
+The earlier notes below are retained. Their two placeholder example links have been repaired; their suggested tools and progression describe earlier practice rather than a requirement to adopt a particular database.
+
+---
+
 # PURPOSE
 
 Use a graph database to maintain and visualise a portfolio of projects.
@@ -12,7 +26,7 @@ This is a good way of getting started. It is very user-friendly and requires no 
 
 You will find you progress onto option 2 when you are actually managing the portfolio day-to-day. 
 
-[here](x)
+[Read the yEd example](Example-4-Using-Yworks/READme.md)
 
 ## Option 2: Use Neo4j
 
@@ -26,7 +40,7 @@ These will build the code as you sketch out your portfolio. You will then be abl
 
 To manage the portfolio, and fully query the portfolio, you will need to learn the query language Cypher, which is pretty similar to SQL. There is a good introductory course on Neo4j website, which probably took me 3 days of effort in all. 
 
-[here](x)
+[Read the Neo4j example](Example-5-Using-Neo4j/READme.md)
 
 
 

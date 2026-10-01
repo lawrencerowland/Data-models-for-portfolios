@@ -1,3 +1,13 @@
+# Choosing a route from governance needs to information
+
+**2020 working note · reading guidance added 1 October 2026.** The useful thread is to start with the decisions and accountabilities an organisation needs, then work through information, data and implementation choices. The three original sketches compare different routes; a graph can support model design without becoming the operational database.
+
+These are proposed client scenarios, not evidence of three delivered engagements or a current service/tool recommendation. Terms such as “BIG” and the implementation checklist are retained as historical working language. Adding to a graph does not itself guarantee that existing queries or applications keep the same meaning: identifiers, relationship definitions and query assumptions still matter.
+
+[Read the illustrated Library explanation](https://lawrencerowland.github.io/library/models/us-portfolio-questions.html#governance) · [Return to the portfolio walkthrough](READme.md)
+
+## Original October 2020 note, retained unchanged
+
 # Selling Governance solutions
 
 - Select a solution

@@ -1,3 +1,13 @@
+# Reading the Health hierarchy draft
+
+**2020 working note · clarification added 1 October 2026.** This is a top-down companion to the [pictured walkthrough](READme.md), not a reconciled count of the entire US government portfolio.
+
+Read its useful structure as **agency → bureau → investment → project → activity**, with investments also related to measures, business functions and services. The original below says both 11 and 6 bureaus and contains an unexplained `22 108 410 66` line. Its second “Business Functions” list describes service categories; the saved Health export has separate `Business_Function` and `Service` node types. Static inspection of the Health export finds 721 Investment records, of which 22 have names, and 202 Project records, of which 108 have names. Its Investment identifier strings are all distinct. It contains 11 Bureau, 18 Business_Function and 29 Service nodes: those figures support the earlier 11-bureau statement and identify the second classification list as services. The complete export’s 437 investments and 1,547 projects count named records, explaining the apparent total mismatch. These are checks of saved export text, not a rebuilt database or independently validated entity register.
+
+[Read the Library case study](https://lawrencerowland.github.io/library/models/us-portfolio-questions.html#model) · [Inspect the retained Health export](cypher_code/Health_sub_graph.cypher)
+
+## Original draft, retained unchanged
+
 ### The Portfolio for the Department of Health and Human Services
 
 Above, we have been dotting around asking typical management and   forensic questions. A top down description  can also be helpful, so here is one of the contents of one of the large sub-portfolios: that for Health. 

@@ -1,3 +1,14 @@
+# Graph exports and unfinished setup
+
+**Historical 2020 files · reading guidance added 1 October 2026.** Read the [pictured walkthrough](../READme.md) before treating these files as a model. The original setup draft below remains incomplete, with unresolved duplicate nodes. It is not a supported import procedure.
+
+- [Complete graph](Complete_graph.cypher), [Health extract](Health_sub_graph.cypher), [FDA extract](FDA_sub_graph.cypher) and [alternate FDA extract](FDA_sub_graph_0.cypher) preserve different saved exports. They are not asserted to be interchangeable or to reproduce each pictured view exactly.
+- `export.cypher0` through `export.cypher3` belong to the staged attempt described below. They are not a verified sequence of migration steps.
+- The cleanup examples use `DETACH DELETE`; matching the proposed survivor and duplicate to the same node can delete the survivor. In one pattern `[pays_for]` names a relationship variable rather than restricting its type. These are substantive reasons not to run the draft as a recipe on an existing database.
+- The original research/development-only data-use restriction still applies. Public files are not a new licence. No imports, deletions, queries or notebook runs were performed for this reading guide.
+
+## Original setup note, retained unchanged
+
 # STATUS
 
 This is not finalised. There are some procedural gaps in this. I will need to redo. 

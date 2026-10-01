@@ -1,3 +1,15 @@
+# Reading the original query sheet
+
+**September 2020 queries · review note added 1 October 2026.** These are retained query texts supporting the [pictured walkthrough](READme.md), not rerun results or a checked contemporary Neo4j tutorial.
+
+The patterns show how a question selects connected records. They also show why the unit of a result matters: `count(i)` and `count(t.Description)` count matched rows/non-null values, not necessarily distinct investments or programmes. Multiple paths can repeat the same entity. The supplier comparison requires identifier/name reconciliation; the start-delay query groups activity observations by business function, not independently established “programme types”. The metric query uses `Project_delay > 100`, so its threshold is strictly more than 100 days.
+
+The spend query uses the historical property name `Enhancement_spend_$m` without identifier quoting, converts values to integers and reports no currency conversion. Its original £82m claim is therefore not a verified monetary result. Inspect types, property names, distinct identifiers and missing records before any future reproduction. No queries have been executed during this review.
+
+2026 terminology references: [Neo4j aggregation and duplicate counting](https://neo4j.com/docs/cypher-manual/current/functions/aggregating/#functions-count) and [identifier naming rules](https://neo4j.com/docs/cypher-manual/current/syntax/naming/). These clarify the reading notes; the historical query text has not been modernised.
+
+## Original query sheet, retained unchanged
+
 ### Cypher queries
 
 These are the queries used to return the results in this note. 
