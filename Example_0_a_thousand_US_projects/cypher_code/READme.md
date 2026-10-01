@@ -2,11 +2,7 @@
 
 This is not finalised. There are some procedural gaps in this. I will need to redo. 
 
-# Sandbox details
-https://sandbox.neo4j.com/login
-lgrowla@gmail.com
-tydtij-Cosxig-vujve8
-click on the sandbox- saying open in browser
+The original temporary sandbox is no longer offered here. Create your own Neo4j instance and use your own connection details. The setup instructions below are historical and incomplete.
 
 # Constructing the Health graph in Sandbox 
 
