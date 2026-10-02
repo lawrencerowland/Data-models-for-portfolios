@@ -1,3 +1,35 @@
+# US IT portfolio: a guide to the original walkthrough
+
+**September 2020 example · reading guidance added 1 October 2026.**
+
+Start with a management question, follow the relationships that bear on it, and inspect the records behind the answer. The original walkthrough below makes this visible through suppliers, investments, projects, activities and measures. Its pictures and wording are retained; its historical results have not been rerun or independently reproduced.
+
+**[Read the illustrated case study in the Library →](https://lawrencerowland.github.io/library/models/us-portfolio-questions.html)**
+
+## Choose a route
+
+- **Follow questions:** continue into the original pictured walkthrough below, from common suppliers to project delays and metrics.
+- **Understand the structure:** inspect the [schema](images1/schema.png), then the [FDA subgraph](images1/FDA_146nodes_155rels.png). The [Health hierarchy note](Hierarchy_overview.md) gives a top-down draft, with its counting inconsistencies explained at the entrance.
+- **Inspect how the views were selected:** [original Cypher queries](Cypher%20queries%20used%20to%20generate%20READme.md). These preserve the historical query text; they are not a checked modern query library.
+- **Connect the model to management practice:** [governance and implementation choices](Governance_solutions.md), including three contrasting routes through data, modelling, handover and reporting tools.
+- **Inspect the retained resources:** [original PDF](2020_09_Running_a_portfolio_from_neo4j_Rowland_1500_US_projects.pdf), [FDA demonstration film (MOV)](Using_Neo4j_sandbox_with_the_FDA_investments.mov), [notebooks and files](.), and [graph exports and incomplete setup notes](cypher_code/READme.md). Reading needs no database; importing or running these files is a separate, unverified task.
+
+## Corrections to keep beside the original
+
+- **Date and coverage:** the original credits ProjectingSuccess / Project Hack and Oxford Business School for US government IT records described as 2013–2018, restricted to research and development. It says rows with incomplete information were dropped. This is a historical subset, not a current or complete picture of US government projects. No broader permission is inferred from public availability.
+- **What is counted:** `Investment` is a source node type, not automatically a programme. Static inspection of the complete export finds 7,249 Investment records, of which 437 have names, and 1,910 Project records, of which 1,547 have names. The headline figures match these named subsets. Investment identifier strings are unique within this export; that does not independently validate their real-world identity. Matched query rows are a third counting unit. The database has not been rebuilt.
+- **Ratings and money:** `Evaluation_by_CIO` is a CIO evaluation, not a client-satisfaction score. The £82m statement conflicts with the field name `Enhancement_spend_$m`; no currency conversion is shown. Treat the amount/currency as unresolved.
+- **HR and Health totals:** the HR section switches between 6 and 8 programmes and 20 and 17 delayed projects. The separate Health export has 721 Investment records (22 named) and 202 Project records (108 named); its totals include unnamed records. Its 11 Bureau, 18 Business_Function and 29 Service records clarify the hierarchy draft’s conflicting “6 Bureaus” and second “Business Functions” heading.
+- **Metrics and delay:** `count(t.Description)` counts non-null descriptions in matched rows; it does not count distinct programmes. Multiple delayed projects can repeat a metric. Summed project-delay days are not the elapsed delay of a whole portfolio, and an average start delay cannot establish why work finished late. The original causal suggestions remain untested.
+- **Supplier picture:** the original says five IBM records, but its picture contains six purple supplier nodes. The nine orange nodes mix organisational levels; “departments” is not a precise node-type count.
+- **Setup:** the original sandbox is retired. The setup draft contains unresolved duplicate handling and destructive cleanup statements. It is retained as historical working material, not instructions to apply to an existing database.
+
+## Original September 2020 walkthrough
+
+The complete original follows. Read its answers with the dated corrections above; the saved pictures are evidence of the earlier demonstration, not a fresh analysis.
+
+---
+
 ## Managing a portfolio within a graph database
 
 A graph database makes it easy to:
